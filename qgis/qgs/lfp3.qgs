@@ -1,0 +1,441 @@
+<!DOCTYPE qgis PUBLIC 'http://mrcc.com/qgis.dtd' 'SYSTEM'>
+<qgis projectname="" version="1.9.0-Master">
+    <title></title>
+    <mapcanvas>
+        <units>meters</units>
+        <extent>
+            <xmin>604059.602916</xmin>
+            <ymin>226142.234902</ymin>
+            <xmax>604579.354959</xmax>
+            <ymax>226441.486078</ymax>
+        </extent>
+        <projections>0</projections>
+        <destinationsrs>
+            <spatialrefsys>
+                <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+                <srsid>1919</srsid>
+                <srid>21781</srid>
+                <authid>EPSG:21781</authid>
+                <description>CH1903 / LV03</description>
+                <projectionacronym>somerc</projectionacronym>
+                <ellipsoidacronym>bessel</ellipsoidacronym>
+                <geographicflag>false</geographicflag>
+            </spatialrefsys>
+        </destinationsrs>
+        <layer_coordinate_transform_info/>
+    </mapcanvas>
+    <legend updateDrawingOrder="true">
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="fixpunkte_lfp3" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="fixpunkte_lfp320150720103149153" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="fixpunktekategorie__lfp" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="fixpunktekategorie__lfp20150720134826780" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="true" checked="Qt::Unchecked" name="fixpunktekategorie3_lfp3" showFeatureCount="0">
+            <filegroup open="true" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="fixpunktekategorie3_lfp320150720103604781" visible="0"/>
+            </filegroup>
+        </legendlayer>
+        <legendlayer drawingOrder="-1" open="false" checked="Qt::Checked" name="ch.so.agi.orthofoto" showFeatureCount="0">
+            <filegroup open="false" hidden="false">
+                <legendlayerfile isInOverview="0" layerid="ch_so_agi_orthofoto20150720103628936" visible="1"/>
+            </filegroup>
+        </legendlayer>
+    </legend>
+    <projectlayers layercount="4">
+        <maplayer minimumScale="0" maximumScale="1e+08" type="raster" hasScaleBasedVisibilityFlag="0">
+            <id>ch_so_agi_orthofoto20150720103628936</id>
+            <datasource>crs=EPSG:21781&amp;featureCount=10&amp;format=image/jpeg&amp;layers=ch.so.agi.orthofoto&amp;styles=&amp;url=http://www.catais.org/wms/orthofoto_aktuell</datasource>
+            <title></title>
+            <abstract></abstract>
+            <layername>ch.so.agi.orthofoto</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+                    <srsid>1919</srsid>
+                    <srid>21781</srid>
+                    <authid>EPSG:21781</authid>
+                    <description>CH1903 / LV03</description>
+                    <projectionacronym>somerc</projectionacronym>
+                    <ellipsoidacronym>bessel</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <customproperties/>
+            <provider>wms</provider>
+            <rasterrenderer opacity="1" alphaBand="-1" band="1" type="singlebandcolordata">
+                <rasterTransparency/>
+            </rasterrenderer>
+            <rasterresampler maxOversampling="2"/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+            <id>fixpunkte_lfp320150720103149153</id>
+            <datasource>dbname='xanadu2' host=localhost port=5432 user='stefan' password='ziegler12' sslmode=disable key='t_id' srid=21781 type=POINT table="av_lfp3_tmp"."fixpunkte_lfp3" (lagegeom) sql=</datasource>
+            <title></title>
+            <abstract></abstract>
+            <layername>fixpunkte_lfp3</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+                    <srsid>1919</srsid>
+                    <srid>21781</srid>
+                    <authid>EPSG:21781</authid>
+                    <description>CH1903 / LV03</description>
+                    <projectionacronym>somerc</projectionacronym>
+                    <ellipsoidacronym>bessel</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <provider encoding="ISO-8859-1">postgres</provider>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol" html="">
+                <symbols>
+                    <symbol outputUnit="MM" mapUnitMinScale="0" mapUnitMaxScale="0" alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="border_width" v="0"/>
+                            <prop k="color" v="136,99,80,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation field=""/>
+                <sizescale field="" scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <displayfield></displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Liberation Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <editorlayout>generatedlayout</editorlayout>
+            <editform></editform>
+            <editforminit></editforminit>
+            <annotationform></annotationform>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="0" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+            <id>fixpunktekategorie3_lfp320150720103604781</id>
+            <datasource>dbname='xanadu2' host=localhost port=5432 user='stefan' password='ziegler12' sslmode=disable key='ogc_fid' srid=21781 type=POINT table="av_avdpool_ch"."fixpunktekategorie3_lfp3" (geometrie) sql=</datasource>
+            <title></title>
+            <abstract></abstract>
+            <layername>fixpunktekategorie3_lfp3</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+                    <srsid>1919</srsid>
+                    <srid>21781</srid>
+                    <authid>EPSG:21781</authid>
+                    <description>CH1903 / LV03</description>
+                    <projectionacronym>somerc</projectionacronym>
+                    <ellipsoidacronym>bessel</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <provider encoding="ISO-8859-1">postgres</provider>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol" html="">
+                <symbols>
+                    <symbol outputUnit="MM" mapUnitMinScale="0" mapUnitMaxScale="0" alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="border_width" v="0"/>
+                            <prop k="color" v="149,35,71,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation field=""/>
+                <sizescale field="" scalemethod="area"/>
+            </renderer-v2>
+            <customproperties/>
+            <displayfield></displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Liberation Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <editorlayout>generatedlayout</editorlayout>
+            <editform></editform>
+            <editforminit></editforminit>
+            <annotationform></annotationform>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+        <maplayer minimumScale="-4.65661e-10" maximumScale="1e+08" geometry="Point" type="vector" hasScaleBasedVisibilityFlag="0">
+            <id>fixpunktekategorie__lfp20150720134826780</id>
+            <datasource>dbname='xanadu2' host=localhost port=5432 user='stefan' password='ziegler12' sslmode=disable key='ogc_fid' srid=21781 type=POINT table="av_mopublic"."fixpunktekategorie__lfp" (geometrie) sql="bfsnr" IN (2464, 2542)</datasource>
+            <title></title>
+            <abstract></abstract>
+            <layername>fixpunktekategorie__lfp</layername>
+            <srs>
+                <spatialrefsys>
+                    <proj4>+proj=somerc +lat_0=46.95240555555556 +lon_0=7.439583333333333 +k_0=1 +x_0=600000 +y_0=200000 +ellps=bessel +towgs84=674.4,15.1,405.3,0,0,0,0 +units=m +no_defs</proj4>
+                    <srsid>1919</srsid>
+                    <srid>21781</srid>
+                    <authid>EPSG:21781</authid>
+                    <description>CH1903 / LV03</description>
+                    <projectionacronym>somerc</projectionacronym>
+                    <ellipsoidacronym>bessel</ellipsoidacronym>
+                    <geographicflag>false</geographicflag>
+                </spatialrefsys>
+            </srs>
+            <transparencyLevelInt>255</transparencyLevelInt>
+            <provider encoding="ISO-8859-1">postgres</provider>
+            <vectorjoins/>
+            <renderer-v2 symbollevels="0" type="singleSymbol" html="">
+                <symbols>
+                    <symbol outputUnit="MM" mapUnitMinScale="0" mapUnitMaxScale="0" alpha="1" type="marker" name="0">
+                        <layer pass="0" class="SimpleMarker" locked="0">
+                            <prop k="angle" v="0"/>
+                            <prop k="border_width" v="0"/>
+                            <prop k="color" v="127,252,177,255"/>
+                            <prop k="color_border" v="0,0,0,255"/>
+                            <prop k="name" v="circle"/>
+                            <prop k="offset" v="0,0"/>
+                            <prop k="scale_method" v="area"/>
+                            <prop k="size" v="2"/>
+                        </layer>
+                    </symbol>
+                </symbols>
+                <rotation field=""/>
+                <sizescale field="" scalemethod="area"/>
+            </renderer-v2>
+            <customproperties>
+                <property key="labeling" value="pal"/>
+                <property key="labeling/addDirectionSymbol" value="false"/>
+                <property key="labeling/angleOffset" value="0"/>
+                <property key="labeling/bufferColorB" value="255"/>
+                <property key="labeling/bufferColorG" value="255"/>
+                <property key="labeling/bufferColorR" value="255"/>
+                <property key="labeling/bufferJoinStyle" value="64"/>
+                <property key="labeling/bufferNoFill" value="false"/>
+                <property key="labeling/bufferSize" value="1"/>
+                <property key="labeling/bufferSizeInMapUnits" value="false"/>
+                <property key="labeling/bufferSizeMapUnitMaxScale" value="0"/>
+                <property key="labeling/bufferSizeMapUnitMinScale" value="0"/>
+                <property key="labeling/bufferTransp" value="0"/>
+                <property key="labeling/centroidWhole" value="false"/>
+                <property key="labeling/dataDefinedProperty0" value=""/>
+                <property key="labeling/dataDefinedProperty1" value=""/>
+                <property key="labeling/dataDefinedProperty10" value=""/>
+                <property key="labeling/dataDefinedProperty11" value=""/>
+                <property key="labeling/dataDefinedProperty12" value=""/>
+                <property key="labeling/dataDefinedProperty13" value=""/>
+                <property key="labeling/dataDefinedProperty14" value=""/>
+                <property key="labeling/dataDefinedProperty15" value=""/>
+                <property key="labeling/dataDefinedProperty16" value=""/>
+                <property key="labeling/dataDefinedProperty17" value=""/>
+                <property key="labeling/dataDefinedProperty18" value=""/>
+                <property key="labeling/dataDefinedProperty19" value=""/>
+                <property key="labeling/dataDefinedProperty2" value=""/>
+                <property key="labeling/dataDefinedProperty20" value=""/>
+                <property key="labeling/dataDefinedProperty21" value=""/>
+                <property key="labeling/dataDefinedProperty3" value=""/>
+                <property key="labeling/dataDefinedProperty4" value=""/>
+                <property key="labeling/dataDefinedProperty5" value=""/>
+                <property key="labeling/dataDefinedProperty6" value=""/>
+                <property key="labeling/dataDefinedProperty7" value=""/>
+                <property key="labeling/dataDefinedProperty8" value=""/>
+                <property key="labeling/dataDefinedProperty9" value=""/>
+                <property key="labeling/decimals" value="0"/>
+                <property key="labeling/displayAll" value="false"/>
+                <property key="labeling/dist" value="0"/>
+                <property key="labeling/distInMapUnits" value="false"/>
+                <property key="labeling/enabled" value="true"/>
+                <property key="labeling/fieldName" value="stand_am"/>
+                <property key="labeling/fontCapitals" value="0"/>
+                <property key="labeling/fontFamily" value="Liberation Sans"/>
+                <property key="labeling/fontItalic" value="false"/>
+                <property key="labeling/fontLetterSpacing" value="0"/>
+                <property key="labeling/fontLimitPixelSize" value="false"/>
+                <property key="labeling/fontMaxPixelSize" value="10000"/>
+                <property key="labeling/fontMinPixelSize" value="3"/>
+                <property key="labeling/fontSize" value="9"/>
+                <property key="labeling/fontSizeInMapUnits" value="false"/>
+                <property key="labeling/fontSizeMapUnitMaxScale" value="0"/>
+                <property key="labeling/fontSizeMapUnitMinScale" value="0"/>
+                <property key="labeling/fontStrikeout" value="false"/>
+                <property key="labeling/fontUnderline" value="false"/>
+                <property key="labeling/fontWeight" value="50"/>
+                <property key="labeling/fontWordSpacing" value="0"/>
+                <property key="labeling/formatNumbers" value="false"/>
+                <property key="labeling/isExpression" value="false"/>
+                <property key="labeling/labelOffsetInMapUnits" value="true"/>
+                <property key="labeling/labelPerPart" value="false"/>
+                <property key="labeling/leftDirectionSymbol" value="&lt;"/>
+                <property key="labeling/limitNumLabels" value="false"/>
+                <property key="labeling/maxCurvedCharAngleIn" value="20"/>
+                <property key="labeling/maxCurvedCharAngleOut" value="-20"/>
+                <property key="labeling/maxNumLabels" value="2000"/>
+                <property key="labeling/mergeLines" value="false"/>
+                <property key="labeling/minFeatureSize" value="0"/>
+                <property key="labeling/multilineAlign" value="0"/>
+                <property key="labeling/multilineHeight" value="1"/>
+                <property key="labeling/namedStyle" value="Normal"/>
+                <property key="labeling/obstacle" value="true"/>
+                <property key="labeling/placeDirectionSymbol" value="0"/>
+                <property key="labeling/placement" value="0"/>
+                <property key="labeling/placementFlags" value="0"/>
+                <property key="labeling/plussign" value="true"/>
+                <property key="labeling/preserveRotation" value="true"/>
+                <property key="labeling/previewBkgrdColor" value="#ffffff"/>
+                <property key="labeling/priority" value="5"/>
+                <property key="labeling/repeatDistInMapUnits" value="false"/>
+                <property key="labeling/repeatDistance" value="0"/>
+                <property key="labeling/reverseDirectionSymbol" value="false"/>
+                <property key="labeling/rightDirectionSymbol" value=">"/>
+                <property key="labeling/scaleMax" value="0"/>
+                <property key="labeling/scaleMin" value="0"/>
+                <property key="labeling/textColorB" value="0"/>
+                <property key="labeling/textColorG" value="0"/>
+                <property key="labeling/textColorR" value="0"/>
+                <property key="labeling/textTransp" value="0"/>
+                <property key="labeling/upsidedownLabels" value="0"/>
+                <property key="labeling/wrapChar" value=""/>
+                <property key="labeling/xOffset" value="0"/>
+                <property key="labeling/xQuadOffset" value="0"/>
+                <property key="labeling/yOffset" value="0"/>
+                <property key="labeling/yQuadOffset" value="0"/>
+            </customproperties>
+            <displayfield>ogc_fid</displayfield>
+            <label>0</label>
+            <labelattributes>
+                <label fieldname="" text="Label"/>
+                <family fieldname="" name="Liberation Sans"/>
+                <size fieldname="" units="pt" value="12"/>
+                <bold fieldname="" on="0"/>
+                <italic fieldname="" on="0"/>
+                <underline fieldname="" on="0"/>
+                <strikeout fieldname="" on="0"/>
+                <color fieldname="" red="0" blue="0" green="0"/>
+                <x fieldname=""/>
+                <y fieldname=""/>
+                <offset x="0" y="0" units="pt" yfieldname="" xfieldname=""/>
+                <angle fieldname="" value="0" auto="0"/>
+                <alignment fieldname="" value="center"/>
+                <buffercolor fieldname="" red="255" blue="255" green="255"/>
+                <buffersize fieldname="" units="pt" value="1"/>
+                <bufferenabled fieldname="" on=""/>
+                <multilineenabled fieldname="" on=""/>
+                <selectedonly on=""/>
+            </labelattributes>
+            <edittypes>
+                <edittype type="0" name="bfsnr"/>
+                <edittype type="0" name="hoehegen"/>
+                <edittype type="0" name="hoehegeom"/>
+                <edittype type="0" name="kategorie"/>
+                <edittype type="0" name="lagegen"/>
+                <edittype type="0" name="nbident"/>
+                <edittype type="0" name="nummer"/>
+                <edittype type="0" name="ogc_fid"/>
+                <edittype type="0" name="punktzeichen"/>
+                <edittype type="0" name="stand_am"/>
+                <edittype type="0" name="tid"/>
+            </edittypes>
+            <editorlayout>generatedlayout</editorlayout>
+            <editform></editform>
+            <editforminit></editforminit>
+            <annotationform></annotationform>
+            <excludeAttributesWMS/>
+            <excludeAttributesWFS/>
+            <attributeactions/>
+        </maplayer>
+    </projectlayers>
+    <properties>
+        <SpatialRefSys>
+            <ProjectCrs type="QString">EPSG:21781</ProjectCrs>
+            <ProjectCRSID type="int">1919</ProjectCRSID>
+        </SpatialRefSys>
+        <Paths>
+            <Absolute type="bool">false</Absolute>
+        </Paths>
+        <Gui>
+            <SelectionColorBluePart type="int">0</SelectionColorBluePart>
+            <CanvasColorGreenPart type="int">255</CanvasColorGreenPart>
+            <CanvasColorRedPart type="int">255</CanvasColorRedPart>
+            <SelectionColorRedPart type="int">255</SelectionColorRedPart>
+            <SelectionColorAlphaPart type="int">255</SelectionColorAlphaPart>
+            <SelectionColorGreenPart type="int">255</SelectionColorGreenPart>
+            <CanvasColorBluePart type="int">255</CanvasColorBluePart>
+        </Gui>
+        <Digitizing>
+            <LayerSnappingList type="QStringList">
+                <value>fixpunkte_lfp320150720103149153</value>
+                <value>fixpunktekategorie3_lfp320150720103604781</value>
+            </LayerSnappingList>
+            <LayerSnappingEnabledList type="QStringList">
+                <value>enabled</value>
+                <value>enabled</value>
+            </LayerSnappingEnabledList>
+            <AvoidIntersectionsList type="QStringList"/>
+            <LayerSnappingToleranceUnitList type="QStringList">
+                <value>1</value>
+                <value>1</value>
+            </LayerSnappingToleranceUnitList>
+            <LayerSnapToList type="QStringList">
+                <value>to_vertex</value>
+                <value>to_vertex</value>
+            </LayerSnapToList>
+            <LayerSnappingToleranceList type="QStringList">
+                <value>20.000000</value>
+                <value>20.000000</value>
+            </LayerSnappingToleranceList>
+        </Digitizing>
+        <PositionPrecision>
+            <DecimalPlaces type="int">2</DecimalPlaces>
+            <Automatic type="bool">true</Automatic>
+        </PositionPrecision>
+    </properties>
+</qgis>
