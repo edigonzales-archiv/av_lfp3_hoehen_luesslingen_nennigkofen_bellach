@@ -85,6 +85,8 @@ WHERE alt.lagegeom && neu.geometrie;
 
 ## Vergleich alte LFP3-Höhen mit DTM (LiDAR 2014)
 
+```
+#!psql
 CREATE OR REPLACE VIEW av_lfp3_tmp.alt_vs_dtm AS
  
 SELECT p.t_id, p.nr_alt, p.nr_neu, p.h_alt, p.h_neu, p.pz_alt, p.pz_neu, 
