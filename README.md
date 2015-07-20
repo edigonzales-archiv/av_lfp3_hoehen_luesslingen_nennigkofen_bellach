@@ -68,19 +68,30 @@ Bei insgesamt 1258 neuen und 1222 alten LFP3 gibts aufgrund der identischen Koor
 #!psql
 CREATE OR REPLACE VIEW av_lfp3_tmp.neu_ohne_alte_hoehe AS
 
-SELECT 1 as ogc_fid, ST_Difference(neu.geometrie, alt.lagegeom) as geom
+SELECT neu.*
 FROM
 (
- SELECT ST_Union(lagegeom) as lagegeom
- FROM av_lfp3_tmp.fixpunkte_lfp3
- WHERE hoehegeom IS NOT NULL
-) as alt,
-(
- SELECT ST_Union(geometrie ) as geometrie
+ SELECT ogc_fid, nummer, hoehegeom, geometrie
  FROM av_avdpool_ng.fixpunktekategorie3_lfp3
  WHERE gem_bfs IN (2464, 2542)
-) as neu
-WHERE alt.lagegeom && neu.geometrie;
+) as neu,
+(
+ SELECT (ST_DumpPoints(ST_Difference(neu.geometrie, alt.lagegeom))).geom as geom
+ FROM
+ (
+  SELECT ST_Union(lagegeom) as lagegeom
+  FROM av_lfp3_tmp.fixpunkte_lfp3
+  WHERE hoehegeom IS NOT NULL
+ ) as alt,
+ (
+  SELECT ST_Union(geometrie ) as geometrie
+  FROM av_avdpool_ng.fixpunktekategorie3_lfp3
+  WHERE gem_bfs IN (2464, 2542)
+ ) as neu
+ WHERE alt.lagegeom && neu.geometrie
+) as diff
+WHERE neu.geometrie && diff.geom
+AND ST_Equals(ST_AsBinary(neu.geometrie), ST_AsBinary(diff.geom));
 ```
 
 ## Vergleich alte LFP3-Höhen mit DTM (LiDAR 2014)
