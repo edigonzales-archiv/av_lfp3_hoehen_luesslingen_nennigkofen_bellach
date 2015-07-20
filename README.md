@@ -107,3 +107,24 @@ FROM av_lfp3_tmp.neu_mit_alter_hoehe as p, av_lidar_2014.dtm as r
 WHERE ST_Intersects(r.rast, p.geometrie);
 ```
 
+## Plausibilitätskontrolle
+
+### Vergleich DTM mit LFP3-Höhen in Zuchwil und Biberist
+
+```
+#!psql
+SELECT p.ogc_fid, p.nummer, p.kategorie, p.geometrie, ST_X(p.geometrie) as x, ST_Y(p.geometrie) as y,
+   p.hoehe as h_lfp, ST_Value(r.rast, p.geometrie) as h_dtm,
+   (ST_Value(r.rast, p.geometrie) - p.hoehe)*100 as dh_cm, p.bfsnr
+FROM 
+(
+SELECT * 
+FROM av_avwmsde_t.cppt
+WHERE bfsnr IN (2534, 2513)
+) as p, av_lidar_2014.dtm as r
+WHERE ST_Intersects(r.rast, p.geometrie)
+AND p.hoehe IS NOT NULL
+AND p.kategorie IN ('LFP1', 'LFP2', 'LFP3');
+```
+
+
