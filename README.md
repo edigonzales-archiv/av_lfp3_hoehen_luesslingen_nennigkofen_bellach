@@ -83,4 +83,14 @@ FROM
 WHERE alt.lagegeom && neu.geometrie;
 ```
 
+## Vergleich alte LFP3-Höhen mit DTM (LiDAR 2014)
+
+CREATE OR REPLACE VIEW av_lfp3_tmp.alt_vs_dtm AS
+ 
+SELECT p.t_id, p.nr_alt, p.nr_neu, p.h_alt, p.h_neu, p.pz_alt, p.pz_neu, 
+       p.gueltigereintrag, p.datum1, p.geometrie, ST_Value(r.rast, p.geometrie) as h_dtm,
+       (ST_Value(r.rast, p.geometrie) - p.h_alt)*100 as dh_cm
+FROM av_lfp3_tmp.neu_mit_alter_hoehe as p, av_lidar_2014.dtm as r
+WHERE ST_Intersects(r.rast, p.geometrie);
+```
 
