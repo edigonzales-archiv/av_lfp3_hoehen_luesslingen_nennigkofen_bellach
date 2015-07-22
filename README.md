@@ -32,12 +32,12 @@ Wie viele der alten LFP3, die eine Höhe aufweisen, können punktgenau (identisc
 
 ```
 #!psql
-CREATE OR REPLACE VIEW av_lfp3_tmp.alt_vs_neu AS
+CREATE OR REPLACE VIEW av_lfp3_tmp.neu_mit_alter_hoehe AS 
 
-SELECT t_id, alt.nummer as nr_alt, neu.nummer as nr_neu, alt.hoehegeom as hoehe_alt, neu.hoehegeom as hoehe_neu,
+SELECT t_id, alt.nummer as nr_alt, neu.nummer as nr_neu, alt.hoehegeom as h_alt, neu.hoehegeom as h_neu,
        alt.punktzeichen_txt as pz_alt, neu.punktzeichen_txt as pz_neu, 
        to_date(neu.gueltigereintrag, 'YYYYMMDD') as gueltigereintrag, to_date(neu.datum1, 'YYYYMMDD') as datum1, 
-       neu.geometrie, (alt.hoehegeom - neu.hoehegeom)*100 as dh_cm
+       neu.geometrie, (alt.hoehegeom - neu.hoehegeom)*100 as dh_cm, neu.gem_bfs
 FROM
 (
  SELECT t_id, nummer, hoehegeom, punktzeichen_txt, lagegeom
@@ -47,7 +47,7 @@ FROM
  SELECT *
  FROM 
  (
-  SELECT entstehung, nummer, hoehegeom, punktzeichen_txt, geometrie 
+  SELECT entstehung, nummer, hoehegeom, punktzeichen_txt, gem_bfs, geometrie 
   FROM av_avdpool_ng.fixpunktekategorie3_lfp3
   WHERE gem_bfs IN (2464, 2542)
  ) a,
