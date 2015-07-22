@@ -42,6 +42,7 @@ FROM
 (
  SELECT t_id, nummer, hoehegeom, punktzeichen_txt, lagegeom
  FROM av_lfp3_tmp.fixpunkte_lfp3
+ WHERE hoehegeom IS NOT NULL
 ) as alt,
 (
  SELECT *
